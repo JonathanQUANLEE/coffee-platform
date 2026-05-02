@@ -1,0 +1,122 @@
+import { PopularityData } from '@/types';
+
+export const popularityData: PopularityData[] = [
+  // 北京
+  {
+    id: 'pop-1',
+    coffeeShopId: 'starbucks-wangfujing',
+    cityId: 'beijing',
+    date: '2024-01-15',
+    popularityScore: 92,
+    orderCount: 1580,
+    searchCount: 3200,
+    source: 'meituan',
+  },
+  {
+    id: 'pop-2',
+    coffeeShopId: 'costa-sanlitun',
+    cityId: 'beijing',
+    date: '2024-01-15',
+    popularityScore: 85,
+    orderCount: 1220,
+    searchCount: 2800,
+    source: 'meituan',
+  },
+  {
+    id: 'pop-3',
+    coffeeShopId: 'peets-coffee-guomao',
+    cityId: 'beijing',
+    date: '2024-01-15',
+    popularityScore: 88,
+    orderCount: 1060,
+    searchCount: 2100,
+    source: 'meituan',
+  },
+  // 上海
+  {
+    id: 'pop-4',
+    coffeeShopId: 'manner-lujiazui',
+    cityId: 'shanghai',
+    date: '2024-01-15',
+    popularityScore: 95,
+    orderCount: 2200,
+    searchCount: 4500,
+    source: 'meituan',
+  },
+  {
+    id: 'pop-5',
+    coffeeShopId: 'seesaw-jingnan',
+    cityId: 'shanghai',
+    date: '2024-01-15',
+    popularityScore: 93,
+    orderCount: 1800,
+    searchCount: 3800,
+    source: 'meituan',
+  },
+  // 广州
+  {
+    id: 'pop-6',
+    coffeeShopId: 'arabica-tianhe',
+    cityId: 'guangzhou',
+    date: '2024-01-15',
+    popularityScore: 90,
+    orderCount: 1350,
+    searchCount: 2900,
+    source: 'meituan',
+  },
+  // 深圳
+  {
+    id: 'pop-7',
+    coffeeShopId: 'blue-bottle-nanshan',
+    cityId: 'shenzhen',
+    date: '2024-01-15',
+    popularityScore: 96,
+    orderCount: 1100,
+    searchCount: 2500,
+    source: 'meituan',
+  },
+  // 成都
+  {
+    id: 'pop-8',
+    coffeeShopId: 'luckin-coffee-tianfu',
+    cityId: 'chengdu',
+    date: '2024-01-15',
+    popularityScore: 89,
+    orderCount: 3500,
+    searchCount: 6200,
+    source: 'meituan',
+  },
+  // 杭州
+  {
+    id: 'pop-9',
+    coffeeShopId: 'ninetrees-westlake',
+    cityId: 'hangzhou',
+    date: '2024-01-15',
+    popularityScore: 91,
+    orderCount: 1300,
+    searchCount: 2700,
+    source: 'meituan',
+  },
+  // 武汉
+  {
+    id: 'pop-10',
+    coffeeShopId: 'mstand-jianghan',
+    cityId: 'wuhan',
+    date: '2024-01-15',
+    popularityScore: 87,
+    orderCount: 1600,
+    searchCount: 3100,
+    source: 'meituan',
+  },
+  // 南京
+  {
+    id: 'pop-11',
+    coffeeShopId: 'intheory-xinjiekou',
+    cityId: 'nanjing',
+    date: '2024-01-15',
+    popularityScore: 88,
+    orderCount: 1150,
+    searchCount: 2300,
+    source: 'meituan',
+  },
+];

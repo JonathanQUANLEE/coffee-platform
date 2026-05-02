@@ -1,0 +1,135 @@
+@import "tailwindcss";
+
+:root {
+  --background: #fffbeb;
+  --foreground: #92400e;
+  --amber-50: #fffbeb;
+  --amber-100: #fef3c7;
+  --amber-200: #fde68a;
+  --amber-300: #fcd34d;
+  --amber-400: #fbbf24;
+  --amber-500: #f59e0b;
+  --amber-600: #d97706;
+  --amber-700: #b45309;
+  --amber-800: #92400e;
+  --amber-900: #78350f;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #1c1917;
+    --foreground: #fef3c7;
+    --amber-50: #1c1917;
+    --amber-100: #292524;
+    --amber-200: #44403c;
+    --amber-300: #78716c;
+    --amber-400: #a8a29e;
+    --amber-500: #d6d3d1;
+    --amber-600: #e7e5e4;
+    --amber-700: #f5f5f4;
+    --amber-800: #fef3c7;
+    --amber-900: #fffbeb;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Coffee-themed scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--amber-100);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--amber-500);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--amber-600);
+}
+
+/* Coffee bean animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.coffee-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, var(--amber-600), var(--amber-800));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Card hover effect */
+.card-hover {
+  transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px -5px rgba(217, 119, 6, 0.2);
+}
+
+/* Coffee steam animation */
+@keyframes steam {
+  0% {
+    opacity: 0;
+    transform: translateY(0) scaleX(1);
+  }
+  15% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-20px) scaleX(1.5);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-40px) scaleX(2);
+  }
+}
+
+.steam {
+  animation: steam 2s ease-out infinite;
+}
+
+/* Popularity badge colors */
+.popularity-high {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+  color: white;
+}
+
+.popularity-medium {
+  background: linear-gradient(135deg, #f97316, #ea580c);
+  color: white;
+}
+
+.popularity-low {
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  color: white;
+}
