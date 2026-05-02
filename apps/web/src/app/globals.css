@@ -1,0 +1,171 @@
+@import "tailwindcss";
+
+@theme {
+  --color-coffee-50: #fdf8f3;
+  --color-coffee-100: #f5e6d3;
+  --color-coffee-200: #e8d0b5;
+  --color-coffee-300: #d4b896;
+  --color-coffee-400: #c49a6c;
+  --color-coffee-500: #a67c52;
+  --color-coffee-600: #8b6340;
+  --color-coffee-700: #6f4e33;
+  --color-coffee-800: #5a3f2a;
+  --color-coffee-900: #3d2b1d;
+  
+  --color-cream-50: #fffef9;
+  --color-cream-100: #fefcf0;
+  --color-cream-200: #fdf8e1;
+  --color-cream-300: #fbf2cc;
+  --color-cream-400: #f8e8a3;
+  --color-cream-500: #f0d87a;
+  
+  --color-accent: #c8553d;
+  --color-accent-light: #e8715a;
+  --color-accent-dark: #a3432f;
+}
+
+:root {
+  --background: #fdf8f3;
+  --foreground: #3d2b1d;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: 'PingFang SC', 'Microsoft YaHei', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* 自定义滚动条 */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d4b896;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a67c52;
+}
+
+/* 渐变文字 */
+.text-gradient {
+  background: linear-gradient(135deg, #a67c52 0%, #c8553d 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* 卡片悬停效果 */
+.card-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -12px rgba(166, 124, 82, 0.25);
+}
+
+/* 毛玻璃效果 */
+.glass {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* 渐变边框 */
+.gradient-border {
+  position: relative;
+}
+
+.gradient-border::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(135deg, #a67c52, #c8553d);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+/* 排名徽章 */
+.rank-badge {
+  background: linear-gradient(135deg, #a67c52 0%, #c8553d 100%);
+}
+
+.rank-badge-gold {
+  background: linear-gradient(135deg, #f0d87a 0%, #c8553d 100%);
+}
+
+/* 浮动动画 */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* 渐入动画 */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+/* 评分星星 */
+.star-rating {
+  color: #f0d87a;
+}
+
+/* 标签胶囊 */
+.tag-pill {
+  @apply px-3 py-1 rounded-full text-xs font-medium;
+  background: linear-gradient(135deg, rgba(166, 124, 82, 0.1) 0%, rgba(200, 85, 61, 0.1) 100%);
+  color: #8b6340;
+  border: 1px solid rgba(166, 124, 82, 0.2);
+}
+
+/* 来源标签 */
+.source-badge {
+  @apply px-2 py-0.5 rounded text-xs font-medium;
+}
+
+.source-dianping {
+  background: #ff6633;
+  color: white;
+}
+
+.source-xiaohongshu {
+  background: #fe2c55;
+  color: white;
+}
+
+.source-bilibili {
+  background: #00a1d6;
+  color: white;
+}
+
+.source-douyin {
+  background: #000000;
+  color: white;
+}
